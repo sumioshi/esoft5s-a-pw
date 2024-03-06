@@ -87,7 +87,7 @@ section, article {
 }
 
 
-z
+
 footer {
     background-color: #343a40;
     color: white;
@@ -127,10 +127,10 @@ a[target='_blank'] {
 footer a[href$='.com'] {
     color: white;
 }
-footer a[href$='.br'] {
+footer a[href$='.com'] {
     color: orangered;
 }
-footer a[href$='.gov'] {
+footer a[href$='.com'] {
     color: limegreen;
 }
 
