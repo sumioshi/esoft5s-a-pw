@@ -1,10 +1,11 @@
-*{
+* {
     list-style-type: none !important; /* se não vai por bem, vai obrigado */
 }
 
 body {
     background-color: #f4f4f4;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 h1, h2 {
@@ -15,10 +16,11 @@ header {
     background-color: #007bff;
     color: white;
     padding: 20px;
-    position: sticky; /* mantem fixo no topo
-    quando rola para baixo. */
-    top: 0; /* faz uma leve animação no header ao rolar para baixo*/
-    z-index: 1; /* para sobrepor o conteudo */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
 }
 
 .curiosidades li::before {
@@ -26,13 +28,10 @@ header {
     margin-right: 5px; 
 }
 
-
 nav {
     display: flex; 
-    justify-content: center; /* Alinha os filhos do elemento nav horizontalmente ao centro */
+    justify-content: center;
     align-items: center;
-    margin-top: 0; 
-    padding-top: 0; 
 }
 
 nav ul {
@@ -43,12 +42,12 @@ nav ul {
 }
 
 nav li {
-    margin: 0 10px; /* Define a margem dos itens da lista para 0 no topo e na parte inferior, e 10px à esquerda e à direita */
+    margin: 0 10px;
 }
 
 nav li:hover {
     color: white;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Adiciona uma transição suave à cor de fundo e à cor do texto */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 nav a {
@@ -64,10 +63,14 @@ nav a:hover {
 
 main {
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Adicionado */
 }
 
 #informacoes img {
-    width: 50px;
+    width: 100px; /* Alterado */
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -78,14 +81,17 @@ main {
 }
 
 section, article {
+    display: flex; 
+    flex-direction: column; 
     margin-bottom: 20px;
     padding: 20px;
     background-color: white;
     border: 1px solid #333;
     border-radius: 5px;
     box-shadow: 5px -6px teal;
+    width: 100%; 
+    max-width: 800px; 
 }
-
 
 
 footer {
@@ -101,22 +107,12 @@ ul.evolucoes li img:hover {
     cursor: pointer;
 }
 
-ul.evolucoes li:nth-child(1) img {
-    width: 100px;
-}
-
-ul.evolucoes li:nth-child(2) img {
-    width: 150px;
-}
-
-ul.evolucoes li:nth-child(3) img {
-    width: 200px;
-}
-
 .evolucoes {
     display: flex;
     justify-content: space-between;
-    list-style-type: none;
+    padding: 0; /* Adicionado */
+    width: 100%; /* Adicionado */
+    max-width: 400px; /* Adicionado */
 }
 
 a[target='_blank'] {
@@ -127,9 +123,11 @@ a[target='_blank'] {
 footer a[href$='.com'] {
     color: white;
 }
+
 footer a[href$='.com'] {
     color: orangered;
 }
+
 footer a[href$='.com'] {
     color: limegreen;
 }
