@@ -93,12 +93,23 @@ section, article {
     max-width: 800px; 
 }
 
+.curiosidades {
+    display: flex;
+    flex-wrap: wrap; /* Quebra de linha */
+    gap: 12px; /* Espaçamento entre itens */
+}
 
 footer {
     background-color: #343a40;
     color: white;
     padding: 20px;
-    text-align: center;
+    display: flex; 
+    justify-content: center; 
+    gap: 12px; 
+}
+
+footer p {
+    margin-bottom: 0; 
 }
 
 ul.evolucoes li img:hover {
@@ -107,12 +118,21 @@ ul.evolucoes li img:hover {
     cursor: pointer;
 }
 
+.imagem-container {
+    text-align: center;
+}
+
+.imagem-container  img {
+    display: inline-block;
+    padding: 10px;  
+}
+
 .evolucoes {
     display: flex;
     justify-content: space-between;
-    padding: 0; /* Adicionado */
-    width: 100%; /* Adicionado */
-    max-width: 400px; /* Adicionado */
+    padding: 0; 
+    width: 100%; 
+    max-width: 400px; 
 }
 
 a[target='_blank'] {
